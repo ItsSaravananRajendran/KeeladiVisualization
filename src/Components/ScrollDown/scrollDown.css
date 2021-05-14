@@ -1,0 +1,13 @@
+
+.downArrow{
+    display: flex;
+    position: absolute;
+    right: 90px;
+    bottom: 67px;
+    color: white;
+    flex-direction: column;
+}
+
+.scrollText{
+    margin-top:8px;
+}
