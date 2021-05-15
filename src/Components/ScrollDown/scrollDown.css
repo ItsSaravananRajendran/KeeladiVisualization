@@ -6,6 +6,7 @@
     bottom: 67px;
     color: white;
     flex-direction: column;
+    align-items: center;
 }
 
 .scrollText{
