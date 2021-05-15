@@ -9,7 +9,6 @@ const ScrollDown = props => {
 
     return <div className={Style.downArrow} onClick={scrollToContent}>
         <DownArrow height={68} width={68} />
-        <div className={Style.scrollText}>Scroll down</div>
     </div>
 }
 
