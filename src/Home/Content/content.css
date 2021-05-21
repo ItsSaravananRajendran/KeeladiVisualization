@@ -3,8 +3,9 @@
 }
 
 .italic{
-    font-family:"Merriweather" ;
-    font-size:24px;
+    line-height: 40px;
+    text-align: justify;
+    font-size:18px;
     font-style:italic;
 }
 
@@ -12,6 +13,7 @@
     margin-top:111px;
     font-weight:700;
     font-size:48px;
+    font-family:"Raleway";
 }
 
 .subtitle{
@@ -20,10 +22,36 @@
     margin-top:32px;
 }
 
+.highlight{
+    color:#A74731;
+    display: flex;
+    font-size:36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.monochrome{
+    font-size:24px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.centerText{
+    color:#D07966;
+    font-weight: 700;
+    font-size:24px;
+    text-align: center;
+}
+
+.orange{
+    color:#D07966;
+    font-size:14px;
+}
 
 .keeladi{
     margin-top:32px;
-    font-size:14px;
+    font-size:18px;
 }
 
 .content{
@@ -48,4 +76,7 @@
     width: 40%;
     font-size:18px;
     margin-right:8px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
 }
