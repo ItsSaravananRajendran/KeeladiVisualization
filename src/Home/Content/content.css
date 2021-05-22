@@ -1,5 +1,5 @@
 .container{
-    margin: 125px 162px;
+    margin: 125px 162px 0 162px;
 }
 
 .italic{
@@ -20,6 +20,7 @@
     font-weight: 700;
     font-size:36px;
     margin-top:32px;
+    font-family: "Raleway";
 }
 
 .highlight{
@@ -107,4 +108,51 @@
     line-height: 30px;
     display: flex;
     align-items: center;
+}
+
+.popup{
+    width:240px;
+    background-color: #929496;
+    border-radius: 10px;
+    position: absolute;
+    font-size:14px;
+    color:#FFF;
+    padding:16px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    margin-bottom:32px;
+}
+
+.red{
+    color:#A74731;
+}
+
+.boldRed{
+    color:#A74731;
+    width:50%;
+    font-size:72px;
+    padding: 0 40px;
+}
+
+.fact{
+    font-size:24px;
+    font-weight: 400;
+    padding:0 40px;
+}
+
+.credits{
+    display: flex;
+    align-items: center;
+    background-color: #D7D6D6;
+    flex-direction: column;
+    font-size:24px;
+    padding:32px;
+}
+
+.idc{
+    font-weight: 700;
+    font-size:28px;
 }
