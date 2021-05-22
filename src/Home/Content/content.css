@@ -126,21 +126,25 @@
     margin-bottom:32px;
 }
 
+
 .red{
     color:#A74731;
+}
+.impFact{
+    align-items: center;
 }
 
 .boldRed{
     color:#A74731;
     width:50%;
     font-size:72px;
-    padding: 0 40px;
+    text-align: right;
+    padding-right:  40px;
 }
 
 .fact{
     font-size:24px;
     font-weight: 400;
-    padding:0 40px;
 }
 
 .credits{

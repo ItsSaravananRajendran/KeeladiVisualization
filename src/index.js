@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import {
     BrowserRouter as Router,
     Switch,
-    Route
+    Route,
+    withRouter
 } from "react-router-dom";
 
 
@@ -18,7 +19,23 @@ import Terracotta from "./Teracotta";
 import StructuralRemains from "./StructuralRemains";
 
 
+function ScrollToTop({ history }) {
+    useEffect(() => {
+        const unlisten = history.listen(() => {
+            window.scrollTo(0, 0);
+        });
+        return () => {
+            unlisten();
+        }
+    }, []);
+
+    return (null);
+}
+
+const Scroll = withRouter(ScrollToTop);
+
 ReactDOM.render(<Router>
+    <Scroll />
     <Switch>
         <Route exact path="/">
             <Home />

@@ -150,7 +150,7 @@ const Content = props => {
     const [popUpText, setpopUpText] = useState("");
     const [popUpStyle, setStyle] = useState({});
     const preventDefault = e => e.preventDefault();
-
+    const screenWidth = window.innerWidth - 320;
     const onEnter = e => {
 
         const key = e.currentTarget.dataset.hover;
@@ -158,7 +158,7 @@ const Content = props => {
         const left = e.pageX - 100;
         const top = e.pageY;
         setpopUpText(text);
-        setStyle({ top, left });
+        text && setStyle({ top, left });
     };
 
     const onExit = e => {
@@ -247,7 +247,7 @@ const Content = props => {
                     onMouseOut={onExit} />
              that describes the grandeur of Madurai City.
         </Text>
-            <TimeLine src="https://i.imgur.com/NcAYUwJ.png" height={235} width={739} useMap="timeLine">
+            <TimeLine src="https://i.imgur.com/NcAYUwJ.png" height={235} width={screenWidth} useMap="timeLine">
                 <Area onClick={preventDefault}
                     onMouseOver={onEnter}
                     onMouseOut={onExit}
@@ -257,35 +257,35 @@ const Content = props => {
                     title="preSangam"
                     href=""
                     coords="49,139,335,156"
-                    shape="rect" cW={990} cH={235} height={235} width={739} />
+                    shape="rect" cW={990} cH={235} height={235} width={screenWidth} />
                 <Area onClick={preventDefault}
                     onMouseOver={onEnter}
                     onMouseOut={onExit}
-                    target="" data-hover="sangam" title="sangam" href="" coords="341,143,718,154" shape="rect" cW={990} cH={235} height={235} width={739} />
+                    target="" data-hover="sangam" title="sangam" href="" coords="341,143,718,154" shape="rect" cW={990} cH={235} height={235} width={screenWidth} />
                 <Area onClick={preventDefault}
                     onMouseOver={onEnter}
                     onMouseOut={onExit}
-                    target="" data-hover="postSangam" title="postSangam" href="" coords="726,142,850,155" shape="rect" cW={990} cH={235} height={235} width={739} />
+                    target="" data-hover="postSangam" title="postSangam" href="" coords="726,142,850,155" shape="rect" cW={990} cH={235} height={235} width={screenWidth} />
                 <Area onClick={preventDefault}
                     onMouseOver={onEnter}
                     onMouseOut={onExit}
-                    target="" data-hover="300" title="300" href="" coords="337,102,12" shape="circle" cW={990} cH={235} height={235} width={739} />
+                    target="" data-hover="300" title="300" href="" coords="337,102,12" shape="circle" cW={990} cH={235} height={235} width={screenWidth} />
                 <Area onClick={preventDefault}
                     onMouseOver={onEnter}
                     onMouseOut={onExit}
-                    target="" data-hover="350" title="350" href="" coords="373,101,9" shape="circle" cW={990} cH={235} height={235} width={739} />
+                    target="" data-hover="350" title="350" href="" coords="373,101,9" shape="circle" cW={990} cH={235} height={235} width={screenWidth} />
                 <Area onClick={preventDefault}
                     onMouseOver={onEnter}
                     onMouseOut={onExit}
-                    target="" data-hover="1" title="1" href="" coords="530,102,11" shape="circle" cW={990} cH={235} height={235} width={739} />
+                    target="" data-hover="1" title="1" href="" coords="530,102,11" shape="circle" cW={990} cH={235} height={235} width={screenWidth} />
                 <Area onClick={preventDefault}
                     onMouseOver={onEnter}
                     onMouseOut={onExit}
-                    target="" data-hover="bar1" title="bar1" href="" coords="530,80,593,88" shape="rect" cW={990} cH={235} height={235} width={739} />
+                    target="" data-hover="bar1" title="bar1" href="" coords="530,80,593,88" shape="rect" cW={990} cH={235} height={235} width={screenWidth} />
                 <Area onClick={preventDefault}
                     onMouseOver={onEnter}
                     onMouseOut={onExit}
-                    target="" data-hover="bar2" title="bar2" href="" coords="579,66,632,76" shape="rect" cW={990} cH={235} height={235} width={739} />
+                    target="" data-hover="bar2" title="bar2" href="" coords="579,66,632,76" shape="rect" cW={990} cH={235} height={235} width={screenWidth} />
             </TimeLine>
             <TextAndMap
                 text={<div>
@@ -319,8 +319,10 @@ const Content = props => {
             Ramesvaram.</div>}
                 style={{
                     height: 500,
-                    width: 500
+                    width: "500px",
+                    marginLeft: "50px"
                 }}
+                width="500px"
                 src='mapbox://styles/raaghavishan/ckoqylzfd6tyl17pbo0wbqrme'
                 mapBox
             />
@@ -351,7 +353,7 @@ const Content = props => {
             various forms of ancient remains such as urn burials, menhirs, inscriptions,
             sculptures, hero‐stones, habitation mounds etc have been identified.
         </Text>
-            <Row>
+            <Row className={Style.impFact}>
                 <div className={Style.boldRed}>
                     116/340
             </div>
@@ -395,27 +397,27 @@ const Content = props => {
                 Based on the ceramics, tiles and minor antiquities, the chronology of the site could be
                 of 3 stages and they are Period-I, II and III.
         </Text>
-            <TimeLine height={145} width={739} src="https://i.imgur.com/fd5eNf4.png" useMap="timeline2">
+            <TimeLine height={145} width={screenWidth} src="https://i.imgur.com/fd5eNf4.png" useMap="timeline2">
                 <Area onClick={preventDefault}
                     onMouseOver={onEnter}
                     onMouseOut={onExit}
                     cW={995}
                     cH={145}
-                    height={145} width={739}
+                    height={145} width={screenWidth}
                     target="" data-hover="period1" target="" alt="" title="" href="" coords="59,46,335,62" shape="rect" />
                 <Area onClick={preventDefault}
                     onMouseOver={onEnter}
                     onMouseOut={onExit}
                     cW={995}
                     cH={145}
-                    height={145} width={739}
+                    height={145} width={screenWidth}
                     target="" data-hover="period2" target="" alt="" title="" href="" coords="337,46,786,61" shape="rect" />
                 <Area onClick={preventDefault}
                     onMouseOver={onEnter}
                     onMouseOut={onExit}
                     cW={995}
                     cH={145}
-                    height={145} width={739}
+                    height={145} width={screenWidth}
                     target="" data-hover="period3" target="" alt="" title="" href="" coords="792,46,934,61" shape="rect" />
             </TimeLine>
             <SubTitle>Carbon dating</SubTitle>
@@ -430,26 +432,26 @@ const Content = props => {
             <div className={Style.center}>
                 <PopUp style={{ fontWeight: 400, padding: "32px 16px" }}>The dates of Sangam period have been moved further 3 centuries back to 6th century BCE. </PopUp>
             </div>
-            <TimeLine height={256} width={739} src="https://i.imgur.com/s5vi4Hg.png" useMap="timeline3">
+            <TimeLine height={256} width={screenWidth} src="https://i.imgur.com/s5vi4Hg.png" useMap="timeline3">
                 <Area onMouseOver={onEnter}
                     onMouseOut={onExit}
                     cW={1012}
                     cH={256}
-                    height={256} width={739}
+                    height={256} width={screenWidth}
                     target="" data-hover="period11"
                     target="" alt="" title="" href="" coords="102,163,178,177" shape="rect" />
                 <Area onMouseOver={onEnter}
                     onMouseOut={onExit}
                     cW={1012}
                     cH={256}
-                    height={256} width={739}
+                    height={256} width={screenWidth}
                     target="" data-hover="period12"
                     target="" alt="" title="" href="" coords="182,165,756,180" shape="rect" />
                 <Area onMouseOver={onEnter}
                     onMouseOut={onExit}
                     cW={1012}
                     cH={256}
-                    height={256} width={739}
+                    height={256} width={screenWidth}
                     target="" data-hover="period13"
                     target="" alt="" title="" href="" coords="758,164,884,177" shape="rect" />
             </TimeLine>
