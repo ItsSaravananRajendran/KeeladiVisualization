@@ -3,6 +3,7 @@ import Style from "./content.css";
 import { Link } from 'react-router-dom';
 
 import TableauMap from "../../Components/TableauMap";
+import MapBox from "../MapBox";
 
 const Map = props => {
     const { height = "auto", width = "100%", backgroundColor = "bisque" } = props;
@@ -11,7 +12,7 @@ const Map = props => {
 
 
 const TextAndMap = props => {
-    const { text, image, left, ...rest } = props;
+    const { text, image, left, mapBox, ...rest } = props;
     return <div className={Style.textAndMap}>
         {left ?
             <React.Fragment>
@@ -21,7 +22,7 @@ const TextAndMap = props => {
             :
             <React.Fragment>
                 <div className={image ? Style.imageText : Style.text} >{text}</div>
-                {image ? <img  {...rest} /> : <TableauMap {...rest} />}
+                {image ? <img  {...rest} /> : mapBox ? <MapBox {...rest} /> : <TableauMap {...rest} />}
             </React.Fragment>}
     </div>
 }
@@ -299,7 +300,10 @@ const Content = props => {
                         hover="chola"
                         onMouseOver={onEnter}
                         onMouseOut={onExit} /> and Pandya.  Its during the Pandyas rule Sangam Literature flourished. This map shows the important ports and capitals of the dynasties.
-            </div>}
+                </div>}
+                image
+                src="https://i.imgur.com/BKDUtYY.png"
+                width="500px"
             />
             <TextAndMap text={<div>
                 From the
@@ -313,9 +317,12 @@ const Content = props => {
             the west and the Pandya country on the east upto Ramesvaram.  The site of Keeladi is situated on the same
             ancient trade route leading from Madurai linking Alagankulam and further to
             Ramesvaram.</div>}
-                src="https://i.imgur.com/ORgHEYH.png"
-                width="60%"
-                image
+                style={{
+                    height: 500,
+                    width: 500
+                }}
+                src='mapbox://styles/raaghavishan/ckoqylzfd6tyl17pbo0wbqrme'
+                mapBox
             />
             <Text>
                 These well known history has instigated the archeological explorations and excavation in this area.
