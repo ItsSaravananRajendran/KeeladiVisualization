@@ -5,7 +5,7 @@ import TitleCard from "../Components/TitleCard";
 import ScrollDown from "../Components/ScrollDown";
 import Content from "./Content";
 
-class App extends Component {
+class Home extends Component {
 
     constructor(props) {
         super(props);
@@ -36,4 +36,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Home;

@@ -1,5 +1,6 @@
 import React from "react";
 import Style from "./content.css";
+import { Link } from 'react-router-dom';
 
 import TableauMap from "../../Components/TableauMap";
 
@@ -10,16 +11,24 @@ const Map = props => {
 
 
 const TextAndMap = props => {
-    const { text, ...rest } = props;
+    const { text, image, left, ...rest } = props;
     return <div className={Style.textAndMap}>
-        <div className={Style.text} >{text}</div>
-        <TableauMap {...rest} />
+        {left ?
+            <React.Fragment>
+                <img  {...rest} />
+                <div className={image ? Style.imageText : Style.text} >{text}</div>
+            </React.Fragment>
+            :
+            <React.Fragment>
+                <div className={image ? Style.imageText : Style.text} >{text}</div>
+                {image ? <img  {...rest} /> : <TableauMap {...rest} />}
+            </React.Fragment>}
     </div>
 }
 
 const Title = ({ children }) => <div className={Style.title}>{children}</div>
 
-const Text = ({ children }) => <p className={Style.content}>{children}</p>
+const Text = ({ children, className = "" }) => <p className={`${Style.content} ${className}`}>{children}</p>
 
 const SubTitle = ({ children }) => <div className={Style.subtitle}>{children}</div>
 
@@ -29,7 +38,40 @@ const HighLight = ({ children }) => <div className={Style.highlight} >{children}
 
 const MonoChrome = ({ children }) => <div className={Style.monochrome}>{children}</div>
 
-const Alert = ({ children }) => <div className={Style.orange}>{children}</div>
+const Alert = ({ children, className }) => <div className={`${Style.orange} ${className}`}>{children}</div>
+
+const Row = ({ children, className = "" }) => {
+    return <div className={`${Style.row} ${className}`}  >{children}</div>
+};
+
+const ImageLink = props => {
+    const { src, desc, link } = props;
+    return <div className={Style.imageLink}>
+        <Link to={link}>
+            <img src={src} width={"100%"} />
+            {desc}
+        </Link>
+    </div>
+}
+
+const ImageCluster = props => {
+    return <div className={Style.imageCluster}>
+        <Row>
+            <ImageLink src="https://i.imgur.com/6nsq0Ct.png" desc="Pottery" link="/pottery" />
+            <ImageLink src="https://i.imgur.com/P1F3EPC.png" desc="Tamili Brahmi script" link="/tamil-script" />
+            <ImageLink src="https://i.imgur.com/wb7ajlH.png" desc="Ornaments" link="/ornaments" />
+        </Row>
+        <Row>
+            <ImageLink src="https://i.imgur.com/gPixfwa.png" desc="Semi-Precious stones" link="/semi-precious" />
+            <ImageLink src="https://i.imgur.com/U0BPAKy.png" desc="Faunal remains" link="/faunal" />
+            <ImageLink src="https://i.imgur.com/yKdCFs3.png" desc="Games and Pastime" link="/games" />
+        </Row>
+        <Row>
+            <ImageLink src="https://i.imgur.com/TtmPaEp.png" desc="Terracotta Figurines" link="/terracotta" />
+            <ImageLink src="https://i.imgur.com/FMTYBph.png" desc="Structural remains" link="/structural-remains" />
+        </Row>
+    </div>
+}
 
 const Content = props => {
     const { nodeRef } = props;
@@ -61,6 +103,8 @@ const Content = props => {
         </Text>
         <TextAndMap
             text="Vaigai River Valley serves as one of the major culture zones of TamilNadu. This map s````````````hows potential places for archeological suvey around Vaigai River Valley ."
+            url="https://public.tableau.com/views/vaigairivervalley/Sheet1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"
+            height={477}
         />
 
         <Text>
@@ -126,11 +170,21 @@ const Content = props => {
             Then they were later led to a coconut grove by a local villager where he had seen a lot of broken pices of terracotta pots. In archeology these were termed as potsherds. When they dug up the place, Black and Red Ware potsherds were raked up around the area. Astonishingly, that dig had partially uncovered an elaborate 2000-year-old brick structure facing north-east.
             That is how the archaeologists got to a 110-acre mound, under which lay evidence of an urban settlement dating back to between 2300 to 2600 years ago.
         </Text>
+        <TextAndMap
+            text="When the ASI team began to dig around the central part of the mound at Keeladi, they found the site was once an Iron Age settlement that evolved and continued into the historic period. The first three metres from the top revealed brick structures from the early historic phase, and 1.5 metres below that was evidence from the Iron Age, where a large number of axes, daggers, spades, knives and forceps were found."
+            image={true}
+            width={"50%"}
+            src="https://i.imgur.com/eOj9cDZ.png"
+        />
+        <Text>
+            “We got lucky!” the chief archeologist of this study said. Madurai is believed to have been continuously inhabited since at least the third century BCE. “We came upon a mound right next to Madurai city, where archaeologists have never been able to dig.”
+        </Text>
         <Title>Key Findings</Title>
         <Text>
             This exacavtion work had yielded a number of antiquities where in fourth season alone 5820 antiquities were found. Each and every important artefact had a story to tell about the richness of the society that habited the place in the past.
             Here take a look at some important Keeladi Findings.
         </Text>
+        <ImageCluster />
         <Title>Cultural Sequence</Title>
         <Text>
             Based on the cuttings of the 4th season of the excavation revealed the cultural deposit
@@ -167,3 +221,12 @@ const Content = props => {
 
 
 export default Content;
+
+export {
+    Text,
+    Title,
+    SubTitle,
+    Row,
+    TextAndMap,
+    Alert
+}
