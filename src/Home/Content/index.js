@@ -371,7 +371,7 @@ const Content = props => {
             year 2013 – 14 by Excavation Branch – VI, Bangalore.
         </Text>
             <SubTitle>Excavations and explorations</SubTitle>
-            <Text>A seven-member team of archaeologists, an epigraphist and graduate students conducted explorations across 293 sites along the Vaigai river valley in Theni, Dindigul, Madurai, Sivaganga and Ramanathapuram districts. During the course of exploration, about 293 sites all along the Vaigai river valley with
+            <Text>A seven-member team of archaeologists, an epigraphist and graduate students conducted explorations across 293 sites along the Vaigai river valley in Theni, Dindigul, Madurai, Sivaganga and Ramanathapuram districts. During the course of exploration, about 340 sites all along the Vaigai river valley with
             various forms of ancient remains such as urn burials, menhirs, inscriptions,
             sculptures, hero‐stones, habitation mounds etc have been identified.
         </Text>
