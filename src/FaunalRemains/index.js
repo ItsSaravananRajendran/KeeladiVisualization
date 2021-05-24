@@ -22,7 +22,7 @@ const Pottery = props => {
             there by indicating that they were predominantly
             cattle raising people.
         </Text>
-        <img src="https://i.imgur.com/MR9Zqkt.png" width="100%" />
+        <img src="https://i.imgur.com/MR9Zqkt.png" width="60%"  />
         <Row className={Style.row}>
             <div width="30%" >
                 <img src="https://i.imgur.com/QPwNQSg.png" />

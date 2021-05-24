@@ -5,4 +5,7 @@ margin-top:24px;
 .alert{
     text-align: center;
     margin-top:24px;
+    font-weight: 700;
+    font-size: 24px;
+    font-style:italic;
 }
