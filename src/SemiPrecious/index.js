@@ -21,7 +21,7 @@ const Pottery = props => {
             are spherical, cylindrical, gooseberry, and barrel.
         </Text>
 
-        <Row Style={{ marginTop: "24px" }}>
+        <Row Style={{ marginTop: "50px" }}>
             <img src="https://i.imgur.com/VKld2aP.png" width="50%" />
             <div style={{ width: "50%" }}>
                 <Row className={Style.row}>

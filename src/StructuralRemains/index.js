@@ -24,6 +24,7 @@ const StructuralRemains = props => {
             during the summer season when the water table shall be low and subsequently remain
             submerged within water during rainy season.
         </Text>
+        <br />
         <Row>
             <img src="https://i.imgur.com/b4nwwp0.png" width="49%" />
             <img src="https://i.imgur.com/ANFlGR3.png" width="49%" />

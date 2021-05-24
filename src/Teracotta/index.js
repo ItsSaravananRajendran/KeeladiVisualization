@@ -19,6 +19,7 @@ const Terracotta = props => {
             human and animal beings, besides
             gamesmen and children toy objects.
         </Text>
+        <Alert className={Style.alert}>The site has not yielded any objects of worship so far</Alert>
         <Row className={Style.margin}>
             <img src="https://i.imgur.com/8WrKxzG.png" width="30%" />
             <img src="https://i.imgur.com/qWI504g.png" width="30%" />
@@ -28,7 +29,7 @@ const Terracotta = props => {
             <img src="https://i.imgur.com/WBYkXJT.png" width="30%" />
             <img src="https://i.imgur.com/GGNLl7X.png" width="30%" />
         </Row>
-        <Alert className={Style.alert}>The site has not yielded any objects of worship so far</Alert>
+
 
     </PageComponent>
 };

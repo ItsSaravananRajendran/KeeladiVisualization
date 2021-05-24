@@ -222,6 +222,7 @@ const Content = props => {
             <TextAndMap
                 text={<div>
                     <div>Vaigai River Valley serves as one of the major culture zones of TamilNadu.</div>
+                      <br />
                     <div>This map shows potential places for archeological suvey around Vaigai River Valley.</div>
                 </div>}
                 url="https://public.tableau.com/views/vaigairivervalley/Sheet1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"
@@ -330,7 +331,7 @@ const Content = props => {
                 style={{
                     height: 500,
                     width: "500px",
-                    marginLeft: "50px"
+                    marginLeft: "95px"
                 }}
                 width="500px"
                 src='mapbox://styles/raaghavishan/ckoqylzfd6tyl17pbo0wbqrme'
@@ -372,7 +373,7 @@ const Content = props => {
             </div>
             </Row>
             <TextAndMap
-                text="This map shows the 340 sites and its corresponding cultural periods. Keeladi on among the habitational site has been subjected to a large scale excavation."
+                text="This map shows the 340 sites and its corresponding cultural periods. Keeladi one among the habitational site has been subjected to a large scale excavation."
                 url="https://public.tableau.com/views/Book1-p3/Sheet3?:language=en&:display_count=y&:origin=viz_share_link"
                 height={422}
             />
@@ -381,7 +382,7 @@ const Content = props => {
             <Text>
                 When the archeologists from ASI decided to conduct a river-focused archeological survey in Tamilnadu, they conducted a “human scanning excercise” where they went to villages and asked people living there if they had seen any old artefacts.
                 In that excercise a retired history teacher told them that one of his students had found some artefacts. These comprised a “coin of Chola King Rajaraja I, few beads and terracotta figurines of 12-13th century AD,”. These were handed over to a tamil Epigraphist.
-            <br />
+            <br /><br />
             Then they were later led to a coconut grove by a local villager where he had seen a lot of broken pices of terracotta pots. In archeology these were termed as potsherds. When they dug up the place, Black and Red Ware potsherds were raked up around the area. Astonishingly, that dig had partially uncovered an elaborate 2000-year-old brick structure facing north-east.
             That is how the archaeologists got to a 110-acre mound, under which lay evidence of an urban settlement dating back to between 2300 to 2600 years ago.
         </Text>
@@ -482,12 +483,12 @@ const Content = props => {
             <SubTitle>Credits</SubTitle>
         </div >
         <div className={Style.credits}>
-            <div><b>Desing</b> : S.Raaghavi </div>
+            <div><b>Design</b> : S.Raaghavi </div>
             <br />
             <div><b>Code</b> : Saravanan Rajendran</div>
             <br />
             <br />
-            <div><b>Guide</b> : Prof.Venkatesh Rajamanickam (Information Design lab)</div>
+            <div><b>Guide</b> : Prof.Venkatesh Rajamanickam</div>
             <br />
             <br />
             <div className={Style.idc}>IDC School of Design, IIT Bombay</div>

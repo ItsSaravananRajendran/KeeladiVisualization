@@ -14,15 +14,8 @@ const MapDetails = {
     Fashioned in fast wheel, with well levigated clay made it retained thin sections in
     evenly fired conditions. The shapes in this ware comprised of deep, shallow bowls
     with a featureless or sharpened rim, medium sized carinated jars, pots, dishes, plates,
-    cups, miniature vessels etc. One of the characteristic feature found with this ware at the
-    lower level was the presence of painted designs on the exterior. The painting was made
-    with some natural white colour very lightly applied around the neck portion. There are
-    few instances where the designs found to be executed even upto the carination of pots.
-    The occurrence of paintings only in selective shapes like small to medium sized bowls
-    and pots indicate its importance as a deluxe variety. The dot and dash pattern was the
-    most preferred used in this ware to produce different design
-    `,
-    coarseRed: `The coarse red ware accounts for more than 60% of the total ceramic
+    cups, miniature vessels etc. `,
+    coarseRed: `Coarse red ware accounts for more than 60% of the total ceramic
     assemblage found throughout the lifespan of the site. The bulk of this ware comes from
     the upper and mid level of the cultural deposit. It was fabricated both in slow and fast
     wheel and in most of the cases retained core in dull grey colour. The shapes were
@@ -32,7 +25,7 @@ const MapDetails = {
     spouts, etc. The decorative pattern noticed in this ware consisted of incised, thumb
     impression, combed designs, finger nail impressions, criss‐cross lines, leaf, herring
     bone pattern and other appliqué designs.`,
-    redPolished: `The red polished ware formed was found in limited quantity and
+    redPolished: `Red Polished ware formed was found in limited quantity and
     majority of them came from the upper levels. With fine to medium fabric, some of the
     storage vessels had decoration on its exterior. The shapes in this ware included
     medium sized storage vessels, pots etc.The site yielded some rare specimens of this
@@ -44,17 +37,14 @@ const MapDetails = {
     rouletted: `Rouletted ware was the distinct intrusive pottery found at Keeladi.
     This pottery is characteristic type of early historic period in Tamil Nadu. The
     occurrence of this ware at any given site assumes importance for maintaining external
-    trade contacts especially with the western world. On contrary a strong indigenous
-    origin of this ware is also advocated. The distinct shape found in this ware is the thin
+    trade contacts especially with the western world. The distinct shape found in this ware is the thin
     sectioned shallow dish, fabricated with fine levigated clay fired in sophisticated
     condition to produce a metallic sound. It has incurved and beaked rim with smooth
     surface. The inner base of the dish normally decorated concentric bands or circles
     resulted by rouletting or chattering pattern . The site of Keeladi
     evinced three varieties such as greyish pink with grey slip on inside and brown to
     sepia on the outside, greyish pink with black slip inside and brown outside and grey
-    with black slip inside and outside . Though this ware started to occur in
-    upper level, a majority of the sherds were collected coeval with structural level. The
-    upper level contained both fine and imitated rouletted sherds fashioned in plain black
+    with black slip inside and outside.The upper level contained both fine and imitated rouletted sherds fashioned in plain black
     and black and red ware. More than two hundred roulette sherds were collected from
     both levels of the site .`
 }
