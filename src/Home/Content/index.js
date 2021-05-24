@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Style from "./content.css";
 import { Link } from 'react-router-dom';
+import debounce from 'lodash/debounce';
 
 import TableauMap from "../../Components/TableauMap";
 import MapBox from "../MapBox";
+
 
 const Map = props => {
     const { height = "auto", width = "100%", backgroundColor = "bisque" } = props;
@@ -151,19 +153,27 @@ const Content = props => {
     const [popUpStyle, setStyle] = useState({});
     const preventDefault = e => e.preventDefault();
     const screenWidth = window.innerWidth - 320;
-    const onEnter = e => {
 
-        const key = e.currentTarget.dataset.hover;
-        const text = hoverMap[key] || "";
-        const left = e.pageX - 100;
-        const top = e.pageY;
-        setpopUpText(text);
-        text && setStyle({ top, left });
+
+    const throttledFunc = debounce((eve, e) => {
+        if (eve === "in") {
+            const key = e.target.dataset.hover;
+            const text = hoverMap[key] || "";
+            const left = e.pageX - 100;
+            const top = e.pageY;
+            setpopUpText(text);
+            text && setStyle({ top, left });
+        } else {
+            setpopUpText("");
+            setStyle({});
+        }
+    }, 250);
+    const onEnter = e => {
+        throttledFunc("in", e);
     };
 
     const onExit = e => {
-        setpopUpText("");
-        setStyle({});
+        throttledFunc("out", e);
     };
 
 
@@ -256,8 +266,8 @@ const Content = props => {
                     alt="preSangam"
                     title="preSangam"
                     href=""
-                    coords="49,139,335,156"
-                    shape="rect" cW={990} cH={235} height={235} width={screenWidth} />
+                    coords="51,141,51,155,333,156,333,137" shape="poly"
+                    cW={990} cH={235} height={235} width={screenWidth} />
                 <Area onClick={preventDefault}
                     onMouseOver={onEnter}
                     onMouseOut={onExit}
