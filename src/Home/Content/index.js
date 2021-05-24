@@ -150,10 +150,11 @@ const hoverMap = {
 
 const DoubleMapBox = props => {
     const { map1, map2 } = props;
+    const mapAtt = { zoom: 5.5, lat: 10.2569, lng: 77.8322 };
     const style = { minWidth: "500px", height: "500px" }
     return <ReactCompareSlider
-        itemOne={<MapBox style={style} src="mapbox://styles/raaghavishan/ckoo4j76a9p0018mu4zlpcrid" />}
-        itemTwo={<MapBox style={style} src="mapbox://styles/raaghavishan/ckozf0jmm2sol17o2wv9j99o2" />}
+        itemOne={<MapBox {...mapAtt} style={style} src="mapbox://styles/raaghavishan/ckoo4j76a9p0018mu4zlpcrid" />}
+        itemTwo={<MapBox {...mapAtt} style={style} src="mapbox://styles/raaghavishan/ckozf0jmm2sol17o2wv9j99o2" />}
         onlyHandleDraggable={true}
         style={{ minWidth: "500px", height: "500px", marginLeft: "95px" }}
     />
@@ -310,7 +311,7 @@ const Content = props => {
                     onMouseOut={onExit}
                     target="" data-hover="bar2" title="bar2" href="" coords="579,66,632,76" shape="rect" cW={990} cH={235} height={235} width={screenWidth} />
             </TimeLine>
-            <div className={Style.textAndMap}>
+            <div className={Style.sliderMap}>
                 <div>
                     During the Sangam age three major dynasties were ruling over South India
                 <HoverText
