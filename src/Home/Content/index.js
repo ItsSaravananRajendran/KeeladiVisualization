@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Style from "./content.css";
 import { Link } from 'react-router-dom';
 import debounce from 'lodash/debounce';
-
+import { ReactCompareSlider } from "react-compare-slider";
 import TableauMap from "../../Components/TableauMap";
 import MapBox from "../MapBox";
 
@@ -147,6 +147,18 @@ const hoverMap = {
     "earlyHistoricPeriod": `Tentatively dated between 300 BCE and 300 CE, yet to be determined scientifically.`,
 };
 
+
+const DoubleMapBox = props => {
+    const { map1, map2 } = props;
+    const style = { minWidth: "500px", height: "500px" }
+    return <ReactCompareSlider
+        itemOne={<MapBox style={style} src="mapbox://styles/raaghavishan/ckoo4j76a9p0018mu4zlpcrid" />}
+        itemTwo={<MapBox style={style} src="mapbox://styles/raaghavishan/ckozf0jmm2sol17o2wv9j99o2" />}
+        onlyHandleDraggable={true}
+        style={{ minWidth: "500px", height: "500px", marginLeft: "95px" }}
+    />
+}
+
 const Content = props => {
     const { nodeRef } = props;
     const [popUpText, setpopUpText] = useState("");
@@ -222,7 +234,7 @@ const Content = props => {
             <TextAndMap
                 text={<div>
                     <div>Vaigai River Valley serves as one of the major culture zones of TamilNadu.</div>
-                      <br />
+                    <br />
                     <div>This map shows potential places for archeological suvey around Vaigai River Valley.</div>
                 </div>}
                 url="https://public.tableau.com/views/vaigairivervalley/Sheet1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"
@@ -298,8 +310,8 @@ const Content = props => {
                     onMouseOut={onExit}
                     target="" data-hover="bar2" title="bar2" href="" coords="579,66,632,76" shape="rect" cW={990} cH={235} height={235} width={screenWidth} />
             </TimeLine>
-            <TextAndMap
-                text={<div>
+            <div className={Style.textAndMap}>
+                <div>
                     During the Sangam age three major dynasties were ruling over South India
                 <HoverText
                         text=" Chera "
@@ -311,11 +323,9 @@ const Content = props => {
                         hover="chola"
                         onMouseOver={onEnter}
                         onMouseOut={onExit} /> and Pandya.  Its during the Pandyas rule Sangam Literature flourished. This map shows the important ports and capitals of the dynasties.
-                </div>}
-                image
-                src="https://i.imgur.com/BKDUtYY.png"
-                width="500px"
-            />
+                </div>
+                <DoubleMapBox />
+            </div>
             <TextAndMap text={<div>
                 From the
             <HoverText
